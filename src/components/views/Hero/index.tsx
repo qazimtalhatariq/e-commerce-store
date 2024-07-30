@@ -1,4 +1,3 @@
-import { heroBoyimg } from "@/components/assets";
 import { BsCart2 } from "react-icons/bs";
 import Image from "next/image";
 import Link from "next/link";
@@ -75,7 +74,7 @@ const Hero = () => {
 
       {/* left side */}
       <div className="hidden md:flex  bg-red-100 rounded-full">
-        <Image src={heroBoyimg} alt="heroimg" height={200} width={500} />
+        <Image src="/heroBoyimg.png" alt="heroimg" height={200} width={500} />
       </div>
     </div>
   );
