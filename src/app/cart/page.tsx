@@ -3,7 +3,7 @@ import ContextWrapper from "@/global/context";
 
 async function fatchAllStoreProducts() {
   let res = await fetch(
-    `https://peu0aj6l.api.sanity.io/v2023-05-26/data/query/production?query=*[_type == 'products']`,
+    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?query=*[_type == 'products']`,
     {
       cache: "no-store",
     }

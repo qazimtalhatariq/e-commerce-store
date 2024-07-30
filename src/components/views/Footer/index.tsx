@@ -20,17 +20,17 @@ const Footer = () => {
             of high quality everyday essentials made.
           </p>
           <div className="flex items-center justify-center">
-            <a href={"https://www.facebook.com"} target="_blank">
-              <FaFacebookF className="text-black" size={30} />
-            </a>
-            <a href={"https://www.twitter.com"} target="_blank">
-              <RiTwitterXFill className="ml-4 text-black" size={30} />
-            </a>
             <a
               href={"https://www.linkedin.com/qazimtalhatariq"}
               target="_blank"
             >
-              <FaLinkedinIn className="ml-4 text-black" size={30} />
+              <FaLinkedinIn className=" text-black" size={30} />
+            </a>
+            <a href={"https://www.twitter.com"} target="_blank">
+              <RiTwitterXFill className="ml-4 text-black" size={30} />
+            </a>
+            <a href={"https://www.facebook.com"} target="_blank">
+              <FaFacebookF className="ml-4 text-black" size={30} />
             </a>
           </div>
         </div>

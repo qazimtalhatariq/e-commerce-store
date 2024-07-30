@@ -15,8 +15,8 @@ const CardAll: FC<{ singleProductData: oneProductType }> = ({
   singleProductData,
 }) => {
   return (
-    <div className="mx-auto w-[11rem] md:w-[16rem] space-y-3 border-2 hover:scale-110 select-none duration-300">
-      <div className="relative border-b-2 w-full">
+    <div className="mx-auto w-[11rem] md:w-[16rem] space-y-3 mt-10  hover:scale-110 select-none duration-300">
+      <div className="relative  w-full">
         <div className="absolute inset-0 z-10" />
         <Image
           width={1000}
@@ -32,7 +32,7 @@ const CardAll: FC<{ singleProductData: oneProductType }> = ({
         <Link href={`/catalog/${singleProductData.slug.current}`}>
           <h6>{singleProductData.productName}</h6>
           <p>${singleProductData.price}</p>
-          <p className="text-sm text-pink-500">
+          <p className="text-sm text-blue-500">
             {singleProductData.productTypes[0]}
           </p>
           <p className="text-red-600">Click Here for Details</p>

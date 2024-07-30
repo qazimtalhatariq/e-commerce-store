@@ -197,7 +197,7 @@ const CartComp = ({
                           onClick={() =>
                             handleDecrementByOne(item._id, item.price)
                           }
-                          className="select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full bg-gray-200"
+                          className="select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full bg-red-200"
                         >
                           -
                         </button>
@@ -207,7 +207,7 @@ const CartComp = ({
                             handleIncrementByOne(item._id, item.price)
                           }
                           disabled={loading}
-                          className="border select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full  border-gray-800"
+                          className="border select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full  border-red-800"
                         >
                           +
                         </button>

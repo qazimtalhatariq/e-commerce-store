@@ -5,14 +5,12 @@ const ProductsType = () => {
     <div className="py-16 px-10 space-y-5">
       {/* Heading */}
       <div className="text-center space-y-3">
-        <p className="text-blue-800 text-sm">PROMOTIONS</p>
-        <h3 className="text-3xl text-gray-800 font-bold">
-          Our Promotions Events
-        </h3>
+        <p className="text-red-600 text-sm">PROMOTIONS</p>
+        <h3 className="text-3xl text-black font-bold">Our Promotions Events</h3>
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-gray-800 mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 text-black mx-auto">
         {/* first grid */}
         <div className="w-full flex flex-col items-center justify-between sm:flex-row col-span-1 md:col-span-2 bg-cat1 px-12">
           <div className="max-w-[13rem] py-8">

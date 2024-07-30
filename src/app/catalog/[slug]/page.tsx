@@ -17,7 +17,7 @@ export async function generateMetadata({
   const slug = params.slug;
 
   const product = await fetch(
-    `https://peu0aj6l.api.sanity.io/v2023-05-26/data/query/production?query=*[_type == 'products']`
+    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?query=*[_type == 'products']`
   ).then((res: any) => res.json());
   const titleToSet: oneProductType = product.result.find(
     (item: oneProductType) => item.slug.current == slug
@@ -32,7 +32,10 @@ export async function generateMetadata({
 // fetch particular data of product using slug
 async function fetchPreviewData(slug: string) {
   let res = await fetch(
-    `https://peu0aj6l.api.sanity.io/v2023-05-26/data/query/production?query=*%5B_type%20%3D%3D%20%22products%22%20%26%26%20slug.current%3D%3D%20%22${slug}%22%5D`
+    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?
+    query=*%5B_type+%3D%3D+%27products%27%5D%7B%0A++productTypes-%3E%7B%0A++++${
+      slug
+    }%0A++%7D%0A++%7D%0A%0A`
   );
   return res.json();
 }
@@ -40,7 +43,7 @@ async function fetchPreviewData(slug: string) {
 // will make static pages of every product
 export async function generateStaticParams() {
   let res = await fetch(
-    `https://peu0aj6l.api.sanity.io/v2023-05-26/data/query/production?query=*[_type == 'products']`,
+    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?query=*[_type == 'products']`,
     {
       next: {
         revalidate: 60,

@@ -112,18 +112,18 @@ const ProductDetail: FC<{ item: oneProductType }> = ({ item }) => {
         {/* right */}
         <div className="p-6 space-y-8">
           <div>
-            <h1 className="text-3xl text-gray-700">{item.productName}</h1>
-            <p className="text-pink-600 text-xl font-medium">
+            <h1 className="text-3xl text-black">{item.productName}</h1>
+            <p className="text-blue-500 text-xl font-medium">
               {item.productTypes[1]}
             </p>
           </div>
           <div className="space-y-2">
-            <p className="text-lg font-semibold text-gray-700">Select Size</p>
-            <div className="flex gap-2 text-pink-600">
+            <p className="text-lg font-semibold text-black">Select Size</p>
+            <div className="flex gap-2 text-red-600">
               {item.size.map((subItem: string, index: number) => (
                 <div
                   key={index}
-                  className="hover:shadow-xl font-semibold cursor-pointer rounded-full bg-gray-100 w-12 h-12 flex justify-center items-center"
+                  className="hover:shadow-xl font-semibold cursor-pointer rounded-full bg-red-100 w-12 h-12 flex justify-center items-center"
                 >
                   {subItem}
                 </div>
@@ -131,18 +131,18 @@ const ProductDetail: FC<{ item: oneProductType }> = ({ item }) => {
             </div>
           </div>
           <div className="flex space-x-7">
-            <p className="font-semibold text-xl text-gray-800">Quantity:</p>
+            <p className="font-semibold text-xl text-black">Quantity:</p>
             <div className="flex gap-2 items-center text-lg">
               <div
                 onClick={decrementTheQuantity}
-                className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full bg-gray-200"
+                className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full bg-red-100"
               >
                 -
               </div>
               <p>{quantity}</p>
               <div
                 onClick={incrementTheQuantity}
-                className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full border border-gray-800"
+                className="select-none cursor-pointer flex justify-center items-center w-9 h-9 rounded-full border border-red-600"
               >
                 +
               </div>
@@ -151,7 +151,7 @@ const ProductDetail: FC<{ item: oneProductType }> = ({ item }) => {
           <div className="flex gap-x-8 items-center">
             <button
               onClick={() => handleAddToCart()}
-              className="flex items-center text-white bg-gray-900 border border-gray-500 px-4 py-2"
+              className="flex items-center text-white bg-red-600 px-4 py-2"
             >
               <BsCart2 />
               &nbsp; &nbsp; Add to Cart
@@ -181,7 +181,7 @@ const ProductDetail: FC<{ item: oneProductType }> = ({ item }) => {
             <div className="w-80">
               <h3 className="font-semibold">PRODUCT CARE</h3>
             </div>
-            <ul className="pl-3 list-disc font-semibold text-gray-900">
+            <ul className="pl-3 list-disc font-semibold text-black">
               <li>Hand wash using cold water.</li>
               <li>Do not using bleach.</li>
               <li>Hang it to dry.</li>

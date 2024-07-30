@@ -12,8 +12,13 @@ export const NavbarArray: Array<NavbarItemType> = [
     isDropDown: true,
     dropDownData: [
       {
+        label: "Sweaters",
+        href: "/female/Sweater",
+        isDropDown: false,
+      },
+      {
         label: "Dresses",
-        href: "/female/Dresse",
+        href: "/female/Dress",
         isDropDown: false,
       },
       {
@@ -22,18 +27,8 @@ export const NavbarArray: Array<NavbarItemType> = [
         isDropDown: false,
       },
       {
-        label: "Pents",
+        label: "Pants",
         href: "/female/Pant",
-        isDropDown: false,
-      },
-      {
-        label: "Jackets",
-        href: "/female/Jacket",
-        isDropDown: false,
-      },
-      {
-        label: "Sweater",
-        href: "/female/Sweater",
         isDropDown: false,
       },
     ],
@@ -56,6 +51,11 @@ export const NavbarArray: Array<NavbarItemType> = [
       {
         label: "T-Shirts",
         href: "/male/T-Shirt",
+        isDropDown: false,
+      },
+      {
+        label: "Pants",
+        href: "/male/Pant",
         isDropDown: false,
       },
     ],
