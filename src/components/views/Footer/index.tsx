@@ -70,7 +70,7 @@ const Footer = () => {
             <nav className="list-none mb-10 space-y-4">
               <li>
                 <a className="text-gray-600 hover:text-gray-800">
-                  Support Carrer
+                  Support Career
                 </a>
               </li>
               <li>
