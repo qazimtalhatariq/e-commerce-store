@@ -1,4 +1,3 @@
-import BASE_PATH_FORAPI from "@/components/shared/BasePath";
 import {
   responseType,
   oneProductType,
@@ -32,10 +31,7 @@ export async function generateMetadata({
 // fetch particular data of product using slug
 async function fetchPreviewData(slug: string) {
   let res = await fetch(
-    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?
-    query=*%5B_type+%3D%3D+%27products%27%5D%7B%0A++productTypes-%3E%7B%0A++++${
-      slug
-    }%0A++%7D%0A++%7D%0A%0A`
+    `https://9ybmugwt.api.sanity.io/v2024-07-27/data/query/production?query=*[_type == 'products']`
   );
   return res.json();
 }

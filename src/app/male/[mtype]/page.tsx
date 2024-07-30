@@ -7,8 +7,7 @@ import { FC } from "react";
 
 async function fetchAllProductsData() {
   let res = await fetch(
-    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2024-07-27/data/query/production?
-    query=*%5B_type+%3D%3D+%27products%27%5D%7B%0A++productTypes-%3E%7B%0A++++Male%0A++%7D%0A++%7D%0A%0A`,
+    `https://${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}.api.sanity.io/v2024-07-27/data/query/production?query=*[_type == 'products']`,
     {
       next: {
         revalidate: 60,
