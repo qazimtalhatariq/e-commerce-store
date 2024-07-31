@@ -1,6 +1,4 @@
-const BASE_PATH_FORAPI =
-  process.env.NODE_ENV === "development"
-    ? "http://localhost:3000"
-    : "https://dine-mart.vercel.app";
+const BASE_PATH_FORAPI = process.env.NODE_ENV === "development";
+("http://localhost:3000");
 
 export default BASE_PATH_FORAPI;
