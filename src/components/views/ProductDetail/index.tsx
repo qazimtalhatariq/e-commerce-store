@@ -5,7 +5,7 @@ import {
   imagesType,
   oneProductType,
 } from "@/components/utils/ProductsDataArrayAndType";
-import { FC, useContext, useState } from "react";
+import { FC, useContext, useState, useEffect } from "react";
 import { client } from "../../../sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import { BsCart2 } from "react-icons/bs";
@@ -20,7 +20,12 @@ function urlFor(source: any) {
 const ProductDetail: FC<{ item: oneProductType }> = ({ item }) => {
   let { cartArray, userData, dispatch } = useContext(cartContext);
   const [imageForPreviewOfSelected, setImageForPreviewOfSelected] =
-    useState<string>(item.image[0]._key);
+    useState<string>("");
+  useEffect(() => {
+    if (item && item.image && item.image.length > 0) {
+      setImageForPreviewOfSelected(item.image[0]._key);
+    }
+  }, [item]);
   const [quantity, setQuantity] = useState(1);
 
   function handleAddToCart() {

@@ -29,7 +29,7 @@ const Card: FC<{ singleProductData: oneProductType }> = ({
         />
       </div>
       <div className="space-y-1 text-black text-center justify-center place-content-center items-center font-semibold text-lg select-none">
-        <Link href={`/catalog/${singleProductData.slug.current}`}>
+        <Link href="/">
           <h6>{singleProductData.productName}</h6>
           <p>${singleProductData.price}</p>
           <p className="text-sm text-blue-500">

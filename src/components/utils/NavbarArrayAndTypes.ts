@@ -9,7 +9,7 @@ export const NavbarArray: Array<NavbarItemType> = [
   {
     label: "Female",
     href: "/female/Female",
-    isDropDown: true,
+    isDropDown: false,
     dropDownData: [
       {
         label: "Sweaters",
@@ -36,7 +36,7 @@ export const NavbarArray: Array<NavbarItemType> = [
   {
     label: "Male",
     href: "/male/Male",
-    isDropDown: true,
+    isDropDown: false,
     dropDownData: [
       {
         label: "Sweaters",

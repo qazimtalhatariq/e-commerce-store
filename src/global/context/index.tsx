@@ -54,6 +54,7 @@ const ContextWrapper = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     fetchApiForAllCartItems();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userData]);
 
   async function dispatch(payload: string, data: any) {

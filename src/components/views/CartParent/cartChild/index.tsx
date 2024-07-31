@@ -47,80 +47,6 @@ const CartComp = ({
     }
   }
 
-  useEffect(() => {
-    PriceSubTotal();
-  }, [allProductsForCart]);
-
-  function handleRemove(product_id: string) {
-    if (userData) {
-      let user_id = userData.uuid;
-      dispatch("removeFromCart", { product_id, user_id });
-    }
-  }
-  useEffect(() => {
-    if (cartArray) {
-      let data = allProductsOfStore.filter((item: oneProductType) => {
-        for (let index = 0; index < cartArray.length; index++) {
-          let element: any = cartArray[index];
-          if (
-            element.product_id === item._id &&
-            element.user_id === userData.uuid
-          ) {
-            return true;
-          }
-        }
-      });
-      let updatedData = data.map((elem: oneProductType) => {
-        for (let index = 0; index < cartArray.length; index++) {
-          let element: any = cartArray[index];
-          if (element.product_id === elem._id) {
-            return {
-              ...elem,
-              quantity: element.quantity,
-            };
-          }
-        }
-      });
-      setAllProductsForCart(updatedData);
-    }
-  }, [cartArray]);
-
-  async function handleDecrementByOne(product_id: string, price: any) {
-    let stableQuantity: number = 0;
-    cartArray.forEach((element: any) => {
-      if (element.product_id == product_id) {
-        stableQuantity = element.quantity;
-      }
-    });
-
-    if (stableQuantity - 1 <= 0) {
-      notificationError("Did not accept lower than 1");
-    } else {
-      await dispatch("updateCart", {
-        product_id: product_id,
-        quantity: stableQuantity - 1,
-        user_id: userData.uuid,
-        price: price,
-      });
-      notificationError("Decremented by One");
-    }
-  }
-  async function handleIncrementByOne(product_id: string, price: any) {
-    let stableQuantity: number = 0;
-    cartArray.forEach((element: any) => {
-      if (element.product_id == product_id) {
-        stableQuantity = element.quantity;
-      }
-    });
-    let returnedVal = await dispatch("updateCart", {
-      product_id: product_id,
-      quantity: stableQuantity + 1,
-      user_id: userData.uuid,
-      price: price,
-    });
-    notificationError("Incremented by One");
-  }
-
   async function handleProcessCheckout() {
     setLoadings(true);
     let linkOrg: any = await fetch(`/api/checkout_sessions`, {
@@ -148,6 +74,10 @@ const CartComp = ({
         <div className="flex flex-col basis-[69%] gap-4">
           {allProductsForCart ? (
             allProductsForCart.map((item: oneProductType, index: number) => {
+              function handleDecrementByOne(_id: string, price: number): void {
+                throw new Error("Function not implemented.");
+              }
+
               return (
                 <div key={index} className=" flex flex-shrink-0 gap-6">
                   <div className="w-[14rem]">
@@ -188,7 +118,7 @@ const CartComp = ({
                         <p>{item.quantity}</p>
                         <button
                           onClick={() =>
-                            handleIncrementByOne(item._id, item.price)
+                            handleDecrementByOne(item._id, item.price)
                           }
                           disabled={loading}
                           className="border select-none cursor-pointer flex justify-center items-center w-8 h-8 rounded-full  border-red-800"
