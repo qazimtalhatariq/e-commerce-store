@@ -13,13 +13,16 @@ const Footer = () => {
             href={"/"}
             className="flex title-font font-medium  items-start md:justify-start justify-start text-black"
           >
-            <Image
+            <div className="text-black text-4xl font-extrabold w-48 h-24 text-center hover:animate-pulse hover:text-red-600">
+              Dine Mart
+            </div>
+            {/* <Image
               width={150}
               height={150}
               src="/Logo.png"
               alt="Logo"
               className="w-48 h-20"
-            />
+            /> */}
           </Link>
           <p className="mt-2">
             Small, artisan label that offers a thoughtfully curated collection
