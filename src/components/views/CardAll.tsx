@@ -32,10 +32,9 @@ const CardAll: FC<{ singleProductData: oneProductType }> = ({
         <Link href="/">
           <h6>{singleProductData.productName}</h6>
           <p>${singleProductData.price}</p>
-          <p className="text-sm text-blue-500">
+          <p className="text-sm text-red-600">
             {singleProductData.productTypes[0]}
           </p>
-          <p className="text-red-600">Click Here for Details</p>
         </Link>
       </div>
     </div>
