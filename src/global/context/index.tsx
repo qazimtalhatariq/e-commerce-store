@@ -9,7 +9,6 @@ import {
 import { cartReducer } from "../reducer";
 
 import { useRouter } from "next/navigation";
-import BASE_PATH_FORAPI from "@/components/shared/BasePath";
 
 export const cartContext = createContext<any>(null);
 

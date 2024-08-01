@@ -9,7 +9,6 @@ import { client } from "../../../../sanity/lib/client";
 import imageUrlBuilder from "@sanity/image-url";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import BASE_PATH_FORAPI from "@/components/shared/BasePath";
 import React from "react";
 
 const builder: any = imageUrlBuilder(client);

@@ -74,7 +74,7 @@ const Hero = () => {
 
       {/* left side */}
       <div className="hidden md:flex  bg-red-100 rounded-full">
-        <Image src="/heroBoyimg.png" alt="heroimg" height={200} width={500} />
+        <Image src={"/heroimg.png"} alt="heroimg" height={200} width={500} />
       </div>
     </div>
   );
