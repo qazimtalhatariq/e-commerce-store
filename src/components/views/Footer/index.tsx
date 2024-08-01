@@ -13,7 +13,13 @@ const Footer = () => {
             href={"/"}
             className="flex title-font font-medium  items-start md:justify-start justify-start text-black"
           >
-            <Image width={150} height={150} src={"/Logo.png"} alt="Logo" />
+            <Image
+              width={150}
+              height={150}
+              src={"/Logo.png"}
+              alt="Logo"
+              className="w-48 h-20"
+            />
           </Link>
           <p className="mt-2">
             Small, artisan label that offers a thoughtfully curated collection
@@ -24,13 +30,22 @@ const Footer = () => {
               href={"https://www.linkedin.com/qazimtalhatariq"}
               target="_blank"
             >
-              <FaLinkedinIn className=" text-black" size={30} />
+              <FaLinkedinIn
+                className="hover:bg-red-600 hover:text-white  text-black p-2 size-14 rounded-lg"
+                size={30}
+              />
             </a>
             <a href={"https://www.twitter.com"} target="_blank">
-              <RiTwitterXFill className="ml-4 text-black" size={30} />
+              <RiTwitterXFill
+                className="ml-4 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
+                size={30}
+              />
             </a>
             <a href={"https://www.facebook.com"} target="_blank">
-              <FaFacebookF className="ml-4 text-black" size={30} />
+              <FaFacebookF
+                className="ml-4 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
+                size={30}
+              />
             </a>
           </div>
         </div>
