@@ -21,13 +21,15 @@ const Hero = () => {
           Anyone can beat you but no one can beat your outfit as long as you
           wear Dine outfits.
         </p>
-        <button
-          aria-label="redirect the user to sale page"
-          className="flex gap-3 items-center rounded-sm text-lg hover:ring-1 hover:ring-black shadow-red-600 bg-red-600 text-white hover:text-black hover:bg-white font-semibold py-3 px-5"
-        >
-          <BsCart2 />
-          <p className="whitespace-pre leading-4">{btnText}</p>
-        </button>
+        <Link href="/">
+          <button
+            aria-label="redirect the user to sale page"
+            className="flex gap-3 items-center rounded-sm text-lg hover:ring-1 hover:ring-black shadow-red-600 bg-red-600 text-white hover:text-black hover:bg-white font-semibold py-3 px-5"
+          >
+            <BsCart2 />
+            <p className="whitespace-pre leading-4">{btnText}</p>
+          </button>
+        </Link>
         <div className="flex gap-4">
           <div className="w-14 md:w-28">
             <Image

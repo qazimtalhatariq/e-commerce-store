@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaFacebookF } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
-
+import { IoLogoGithub } from "react-icons/io";
 const Footer = () => {
   return (
     <footer className="text-black body-font">
@@ -30,7 +30,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center justify-center">
             <a
-              href={"https://www.linkedin.com/qazimtalhatariq"}
+              href={"https://www.linkedin.com/in/qazimtalhatariq/"}
               target="_blank"
             >
               <FaLinkedinIn
@@ -38,15 +38,21 @@ const Footer = () => {
                 size={30}
               />
             </a>
+            <a href={"https://github.com/qazimtalhatariq"} target="_blank">
+              <IoLogoGithub
+                className="ml-2 hover:bg-red-600 hover:text-white  text-black p-2 size-14 rounded-lg"
+                size={30}
+              />
+            </a>
             <a href={"https://www.twitter.com"} target="_blank">
               <RiTwitterXFill
-                className="ml-4 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
+                className="ml-2 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
                 size={30}
               />
             </a>
             <a href={"https://www.facebook.com"} target="_blank">
               <FaFacebookF
-                className="ml-4 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
+                className="ml-2 text-black hover:bg-red-600 hover:text-white p-2 size-14 rounded-lg"
                 size={30}
               />
             </a>
@@ -57,27 +63,21 @@ const Footer = () => {
             <h2 className="title-font tracking-widest mb-3 text-xl font-bold">
               Company
             </h2>
-            <nav className="list-none mb-10 space-y-4">
+            <nav className="list-none mb-10 font-bold space-y-4">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">About</a>
+                <a className="text-gray-500 hover:text-black">About</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Terms of Use
-                </a>
+                <a className="text-gray-500 hover:text-black">Terms of Use</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Privacy Policy
-                </a>
+                <a className="text-gray-500 hover:text-black">Privacy Policy</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  How it Works
-                </a>
+                <a className="text-gray-500 hover:text-black">How it Works</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Contact Us</a>
+                <a className="text-gray-500 hover:text-black">Contact Us</a>
               </li>
             </nav>
           </div>
@@ -85,17 +85,15 @@ const Footer = () => {
             <h2 className="title-font tracking-widest mb-3 text-xl font-bold">
               Support
             </h2>
-            <nav className="list-none mb-10 space-y-4">
+            <nav className="list-none font-bold mb-10 space-y-4">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">
-                  Support Career
-                </a>
+                <a className="text-gray-500 hover:text-black">Support Career</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">24h Service</a>
+                <a className="text-gray-500 hover:text-black">24h Service</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Quick Chat</a>
+                <a className="text-gray-500 hover:text-black">Quick Chat</a>
               </li>
             </nav>
           </div>
@@ -103,12 +101,12 @@ const Footer = () => {
             <h2 className="title-font tracking-widest mb-3 text-xl font-bold">
               Contact
             </h2>
-            <nav className="list-none mb-10 space-y-4">
+            <nav className="list-none font-bold mb-10 space-y-4">
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Whatsapp</a>
+                <a className="text-gray-500 hover:text-black">Whatsapp</a>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-gray-800">Support 24h</a>
+                <a className="text-gray-500 hover:text-black">Support 24h</a>
               </li>
             </nav>
           </div>
@@ -128,7 +126,20 @@ const Footer = () => {
             </a>
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-            <a className="text-black">
+            <Link
+              href={"https://github.com/qazimtalhatariq"}
+              className="w-5 h-5  text-black"
+            >
+              <svg
+                className="github-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+              >
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.43 9.8 8.2 11.37.6.11.82-.26.82-.58v-2.03c-3.34.73-4.03-1.61-4.03-1.61-.54-1.37-1.33-1.74-1.33-1.74-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .1-.8.42-1.31.77-1.61-2.69-.3-5.52-1.34-5.52-5.97 0-1.32.47-2.4 1.23-3.24-.14-.3-.53-1.54.1-3.22 0 0 1.02-.33 3.34 1.25.97-.26 2-.39 3.02-.4 1.02.01 2.05.14 3.02.4 2.32-1.57 3.34-1.25 3.34-1.25.63 1.68.24 2.92.12 3.22.77.84 1.22 1.91 1.22 3.24 0 4.64-2.83 5.67-5.53 5.96.43.37.82 1.11.82 2.24v3.32c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+            </Link>
+            <a className="ml-3 text-black">
               <svg
                 fill="currentColor"
                 strokeLinecap="round"
@@ -166,19 +177,6 @@ const Footer = () => {
                 <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
               </svg>
             </a>
-            <Link
-              href={"https:github.com/qazimtalhatariq"}
-              className="w-5 h-5 ml-3 text-black"
-            >
-              <svg
-                className="github-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="black"
-              >
-                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.43 9.8 8.2 11.37.6.11.82-.26.82-.58v-2.03c-3.34.73-4.03-1.61-4.03-1.61-.54-1.37-1.33-1.74-1.33-1.74-1.09-.75.08-.73.08-.73 1.2.08 1.84 1.23 1.84 1.23 1.07 1.84 2.81 1.31 3.5 1 .1-.8.42-1.31.77-1.61-2.69-.3-5.52-1.34-5.52-5.97 0-1.32.47-2.4 1.23-3.24-.14-.3-.53-1.54.1-3.22 0 0 1.02-.33 3.34 1.25.97-.26 2-.39 3.02-.4 1.02.01 2.05.14 3.02.4 2.32-1.57 3.34-1.25 3.34-1.25.63 1.68.24 2.92.12 3.22.77.84 1.22 1.91 1.22 3.24 0 4.64-2.83 5.67-5.53 5.96.43.37.82 1.11.82 2.24v3.32c0 .32.22.7.83.58C20.57 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z" />
-              </svg>
-            </Link>
           </span>
         </div>
       </div>
