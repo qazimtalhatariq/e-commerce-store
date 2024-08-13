@@ -92,4 +92,4 @@ For any inquiries, feel free to reach out:
 
 Email: qazimtalhatariq@gmail.com
 
-LinkedIn: [Visit My Profile](https://www.linkedin.com/in/qazimtalhatariq/)
+LinkedIn: [qazimtalhatariq](https://www.linkedin.com/in/qazimtalhatariq/)
